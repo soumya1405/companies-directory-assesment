@@ -1,0 +1,13 @@
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 280px));
+  justify-content: center;   /* ✅ Centers cards horizontally */
+  gap: 20px;
+  padding: 20px;
+}
+
+.status {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+}

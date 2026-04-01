@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Google",
+    "location": "USA",
+    "industry": "Tech"
+  },
+  {
+    "id": 2,
+    "name": "TCS",
+    "location": "India",
+    "industry": "IT Services"
+  },
+  {
+    "id": 3,
+    "name": "Infosys",
+    "location": "India",
+    "industry": "IT Services"
+  },
+  {
+    "id": 4,
+    "name": "Amazon",
+    "location": "USA",
+    "industry": "E-commerce"
+  },
+  {
+    "id": 5,
+    "name": "Microsoft",
+    "location": "USA",
+    "industry": "Tech"
+  },
+  {
+    "id": 6,
+    "name": "Wipro",
+    "location": "India",
+    "industry": "IT Services"
+  },
+  {
+    "id": 7,
+    "name": "Flipkart",
+    "location": "India",
+    "industry": "E-commerce"
+  },
+  {
+    "id": 8,
+    "name": "Zoho",
+    "location": "India",
+    "industry": "Tech"
+  },
+  {
+    "id": 9,
+    "name": "IBM",
+    "location": "USA",
+    "industry": "Tech"
+  },
+  {
+    "id": 10,
+    "name": "Oracle",
+    "location": "USA",
+    "industry": "Tech"
+  },
+  {
+    "id": 11,
+    "name": "Accenture",
+    "location": "Ireland",
+    "industry": "Consulting"
+  },
+  {
+    "id": 12,
+    "name": "Capgemini",
+    "location": "France",
+    "industry": "Consulting"
+  },
+  {
+    "id": 13,
+    "name": "Cognizant",
+    "location": "USA",
+    "industry": "IT Services"
+  },
+  {
+    "id": 14,
+    "name": "Deloitte",
+    "location": "USA",
+    "industry": "Consulting"
+  },
+  {
+    "id": 15,
+    "name": "Tech Mahindra",
+    "location": "India",
+    "industry": "IT Services"
+  },
+  {
+    "id": 16,
+    "name": "Paytm",
+    "location": "India",
+    "industry": "Fintech"
+  },
+  {
+    "id": 17,
+    "name": "PhonePe",
+    "location": "India",
+    "industry": "Fintech"
+  },
+  {
+    "id": 18,
+    "name": "Swiggy",
+    "location": "India",
+    "industry": "Food Delivery"
+  },
+  {
+    "id": 19,
+    "name": "Zomato",
+    "location": "India",
+    "industry": "Food Delivery"
+  },
+  {
+    "id": 20,
+    "name": "Tesla",
+    "location": "USA",
+    "industry": "Automobile"
+  }
+]
