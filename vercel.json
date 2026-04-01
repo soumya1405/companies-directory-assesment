@@ -1,19 +1,25 @@
 {
-  "version": 3,
+  "version": 4,
   "name": "companies-directory",
-  "projects": [
+  "builds": [
     {
       "src": "front-end/companies-frontend/package.json",
       "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build"
-      }
+      "config": { "distDir": "build" }
+    },
+    {
+      "src": "back-end/**/*.js",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
       "dest": "back-end/$1.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "front-end/companies-frontend/$1"
     }
   ]
 }
