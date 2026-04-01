@@ -1,7 +1,19 @@
 {
-  "version": 2,
-  "rewrites": [
-    { "source": "/api/(.*)", "destination": "/back-end/index.js" },
-    { "source": "/(.*)", "destination": "/front-end/companies-frontend/$1" }
+  "version": 3,
+  "name": "companies-directory",
+  "projects": [
+    {
+      "src": "front-end/companies-frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "back-end/$1.js"
+    }
   ]
 }
