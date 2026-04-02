@@ -2,7 +2,7 @@ import "../styles/CompanyList.css";
 import CompanyCard from "./CompanyCard";
 import { useCompany } from "../context/CompanyContext";
 import Pagination from "./Pagination";
-import closeIcon from "../assets/close.png";
+import deadineIcon from "../assets/deadline.png";
 import errorIcon from "../assets/deadline.png";
 
 const CompanyList = () => {
@@ -11,7 +11,7 @@ const CompanyList = () => {
   if (loading)
     return (
       <div className="status">
-        <img src={closeIcon} alt="Loading" style={{ width: "24px", marginRight: "8px" }} />
+        <img src={deadineIcon} alt="Loading" style={{ width: "24px", marginRight: "8px" }} />
         Loading...
       </div>
     );
