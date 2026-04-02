@@ -3,30 +3,17 @@ import { useCompany } from "../context/CompanyContext";
 
 const Pagination = () => {
   const {
-     companies,         // ✅ paginated backend data
-        locations,
-        industries,
-        loading,
-        error,
-        search,
-        setSearch,
-        location,
-        setLocation,
-        industry,
-        setIndustry,
-        currentPage,
-        setCurrentPage,
-        itemsPerPage,
-        totalPages,  
+    currentPage,
+    setCurrentPage,
+    totalPages,
   } = useCompany();
 
-  // const totalPages = Math.ceil(filtered.length / itemsPerPage);
 
   const pages = [...Array(totalPages).keys()].map(n => n + 1);
 
   return (
     <div className="pagination">
-      {/* Prev */}
+
       <button
         onClick={() => setCurrentPage(p => p - 1)}
         disabled={currentPage === 1}
@@ -34,7 +21,6 @@ const Pagination = () => {
         ⬅ Prev
       </button>
 
-      {/* Page Numbers */}
       {pages.map(p => (
         <button
           key={p}
@@ -45,7 +31,6 @@ const Pagination = () => {
         </button>
       ))}
 
-      {/* Next */}
       <button
         onClick={() => setCurrentPage(p => p + 1)}
         disabled={currentPage === totalPages}
