@@ -1,7 +1,6 @@
-import { createContext, useContext, useEffect, useState } from "react";
-
+import { createContext, useContext, useEffect, useState } from "react"
 const CompanyContext = createContext();
-
+const API_BASEURL = process.env.REACT_APP_API_BASEURL;
 export const CompanyProvider = ({ children }) => {
     const [companies, setCompanies] = useState([]);
 
@@ -27,12 +26,12 @@ export const CompanyProvider = ({ children }) => {
                 setLoading(true);
 
                 const offset = (currentPage - 1) * itemsPerPage;
-                const filterResponse = await fetch("http://localhost:5000/api/filters");
+                const filterResponse = await fetch(`${API_BASEURL}/api/filters`);
                 const filterData = await filterResponse.json();
                 setLocations(filterData.locations);
                 setIndustries(filterData.industries);
                 const res = await fetch(
-                    `http://localhost:5000/api/companies?offset=${offset}&limit=${itemsPerPage}&search=${search}&location=${location}&industry=${industry}`
+                    `${API_BASEURL}/api/companies?offset=${offset}&limit=${itemsPerPage}&search=${search}&location=${location}&industry=${industry}`
                 );
 
                 if (!res.ok) throw new Error("Failed to fetch companies");
@@ -61,7 +60,7 @@ export const CompanyProvider = ({ children }) => {
     return (
         <CompanyContext.Provider
             value={{
-                companies,         // ✅ paginated backend data
+                companies,  
                 locations,
                 industries,
                 loading,
@@ -75,7 +74,7 @@ export const CompanyProvider = ({ children }) => {
                 currentPage,
                 setCurrentPage,
                 itemsPerPage,
-                totalPages,        // ✅ total pages from backend
+                totalPages, 
             }}
         >
             {children}
