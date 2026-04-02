@@ -9,20 +9,20 @@ const CompanyList = () => {
   const { companies, loading, error } = useCompany();
 
   if (loading)
-  return (
-    <div className="status">
-      <img src={closeIcon} alt="Loading" style={{ width: "24px", marginRight: "8px" }} />
-      Loading...
-    </div>
-  );
+    return (
+      <div className="status">
+        <img src={closeIcon} alt="Loading" style={{ width: "24px", marginRight: "8px" }} />
+        Loading...
+      </div>
+    );
 
-if (error)
-  return (
-    <div className="status">
-      <img src={errorIcon} alt="Error" style={{ width: "24px", marginRight: "8px" }} />
-      {error}
-    </div>
-  );
+  if (error)
+    return (
+      <div className="status">
+        <img src={errorIcon} alt="Error" style={{ width: "24px", marginRight: "8px" }} />
+        {error}
+      </div>
+    );
   if (!companies.length)
     return <div className="status">No companies found</div>;
 

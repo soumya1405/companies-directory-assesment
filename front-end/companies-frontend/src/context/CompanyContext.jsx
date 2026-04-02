@@ -16,7 +16,7 @@ export const CompanyProvider = ({ children }) => {
 
     // Pagination
     const [currentPage, setCurrentPage] = useState(1);
-    const itemsPerPage = 5;
+    const itemsPerPage = 4;
     const [totalPages, setTotalPages] = useState(1);
 
     // Fetch companies from backend
